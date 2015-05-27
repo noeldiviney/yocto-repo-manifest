@@ -31,7 +31,7 @@
   <project remote="freescale"   revision="dizzy"    name="meta-fsl-arm-extra"       path="poky/meta-fsl-arm-extra"/>
   <project remote="freescale"   revision="dizzy"    name="meta-fsl-demos"           path="poky/meta-fsl-demos"/>
   <project remote="freescale"   revision="dizzy"    name="Documentation"            path="poky/Documentation"/>
-  <project remote="tnd"         revision="master"   name="meta-tnd"                 path="poky/builds"/>
+  <project remote="tnd"         revision="master"   name="meta-builds"              path="poky/builds"/>
   <project remote="qt5"         revision="dizzy"    name="meta-qt5"                 path="poky/meta-qt5"/>
   <project remote="raspberrypi" revision="master"   name="meta-raspberrypi"         path="poky/meta-raspberrypi"/>
   <project remote="gstreamer"   revision="master"   name="meta-gstreamer1.0"        path="poky/meta-gstreamer1.0"/>

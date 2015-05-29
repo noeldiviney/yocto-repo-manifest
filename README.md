@@ -55,6 +55,50 @@ The **yocto** repositories catered for are contained in the "default.xml" manife
       -->
     </manifest>
 
+###Repo installs the above structure such that the Yocto build environment is as follows: ##
+
+    yocto-dizzy/
+        poky/
+            base/                holds base layers for Freescale
+            bitbake              holds the bitbake build tool stuff
+            builds/
+                Atmel/            holds the different Atmel builds         ie at91sam9c5ek etc
+                Altera/           holds the different Altera builds        ie sockit etc
+                Freescale/        holds the different Freescale builds     ie wandboard-quad etc
+                Raspberrypi/      holds the different Raspberrypi builds   ie model-b+ etc
+                Xilinx/           holds the different Xilinx builds        ie parallella etc
+            documentation/        holds yocto manuals
+            meta/
+            meta-altera/
+            meta-atmel/
+            meta-fsl-arm/
+            meta-fsl-arm-extra/
+            meta-fsl-demos/
+            meta-gstreamer1.0/
+            meta-linaro/
+            meta-odroid/
+            meta-openembedded/
+            meta-parallella/
+            meta-qt5/
+            meta-raspberrypi/
+            meta-selftest/
+            meta-skeleton/
+            meta-ti/
+            meta-xilinx/
+            meta-yocto/
+            meta-yocto-bsp/
+            meta-scripts/
+            tarballs-altera/        holds already downloaded tarballs. Speeds up subsequent builds
+            tarballs-atmel/         holds already downloaded tarballs. Speeds up subsequent builds
+            tarballs-freescale/     holds already downloaded tarballs. Speeds up subsequent builds
+            tarballs-raspberrypi/   holds already downloaded tarballs. Speeds up subsequent builds
+            tarballs-xilinx/        holds already downloaded tarballs. Speeds up subsequent builds
+            .repo                   Git stuff
+            oe-init-build-env       openembedded script for initialising build environment
+            oe-init-build-env-memres
+            README                  Readme file
+            setup-environment       Sources script for initialising a build environment.
+
 ### Download and Install Google's repo utility ###
 
 The BSP is based on the Yocto Project, which consists of a number of applicable metadata 'layers'. These are managed by the repo utility.

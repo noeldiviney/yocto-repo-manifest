@@ -124,7 +124,10 @@ The BSP is based on the Yocto Project, which consists of a number of applicable 
 
 once this has completed you should have a complete development environment
 
-### Build a project ie the Wanboard-quad ###
+
+
+### Build the Freescale Wanboard-quad project ###
+
 source the environment
 
     $: . ./setup-environment builds/Freescale/wandboard-quad
@@ -134,28 +137,21 @@ Run Bitbake
     $: bitbake fsl-image-multimedia-full
 
 
-## And thats all there is to it ##
-## EXCEPT!!          ##
 
-Raspberrypi fails to build with **yocto dizzy**, so we need **yocto daisy**
+### Build the Atmel Core9g25 project ###
 
-### Create the BSP directory for YOCTO 1.7 daisy ###
-    
-    $: PATH=${PATH}:~/bin
-    $: mkdir yocto-daisy
-    $: cd yocto-daisy
+source the environment
 
-#### Initialise the repositories for POKY daisy ####
+    $: . ./setup-environment builds/Atmel/Core0g25
 
-    $: repo init -u https://github.com/noeldiviney/yocto-repo -b daisy 
+Run Bitbake
 
-#### Download yocto, poky, openembedded and all BSP metadata layers ####
+    $: bitbake core-image-minimal
 
-    $: repo sync
 
-once this has completed you should have a complete development environment
 
-### Build a project ie the raspberrypi ###
+### Build the raspberrypi model-b+ project ###
+
 source the environment
 
     $: . ./setup-environment builds/Raspberrypi/model-b+
@@ -164,3 +160,15 @@ Run Bitbake
 
     $: bitbake rpi-hwup-image
     
+
+
+### Build the Adapteva parallella project ###
+
+source the environment
+
+    $: . ./setup-environment builds/Xilinx/parallella
+
+Run Bitbake
+
+    $: bitbake core-image-minimal
+
